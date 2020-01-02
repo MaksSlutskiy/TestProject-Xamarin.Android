@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:text="demo"
+         />
+     <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+         android:textAlignment="center"
+        android:text="demo"
+         />
+   
+  
+   
+   <GridLayout
+        android:paddingVertical="30dp"
+      android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:rowCount="1"
+       >
+
+        <Button
+             android:background="@android:color/holo_red_light"
+            android:enabled="false"
+            android:layout_marginRight="10dp"
+            android:height="100dp"
+            android:width="100dp"
+            android:text="tab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+         <Button
+              local:MvxBind="Click NavigateToEditCommand"
+              android:layout_marginRight="10dp"
+             android:height="100dp"
+            android:width="100dp"
+             android:text="tab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+         <Button
+            local:MvxBind="Click NavigateToThirdPageCommand"
+             android:height="100dp"
+            android:width="100dp"
+             android:text="tab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+     </GridLayout>
+    <Mvx.MvxListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        local:MvxBind="ItemsSource Kittens"
+        local:MvxItemTemplate="@layout/item_kitten"/>
+</LinearLayout>

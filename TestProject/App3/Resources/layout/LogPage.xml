@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+     android:orientation="vertical"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <TextView
+        android:textAlignment="center"
+        android:textSize="@dimen/abc_action_bar_content_inset_material"
+        android:textColor="@color/material_blue_grey_800"
+        android:text="Login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <EditText
+        android:padding="@dimen/abc_action_bar_content_inset_material"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+    local:MvxBind="Text Login"
+    />
+     <TextView
+        android:textAlignment="center"
+        android:textSize="@dimen/abc_action_bar_content_inset_material"
+        android:textColor="@color/material_blue_grey_800"
+        android:text="Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <EditText
+         android:padding="@dimen/abc_action_bar_content_inset_material"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+     local:MvxBind="Text Password"
+    />
+    <TextView
+        local:MvxBind="Text Message"
+        android:textSize="30dp"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <Button
+        android:layout_margin="@dimen/abc_action_bar_content_inset_material"
+        android:text="Login"
+        android:textSize="@dimen/abc_action_bar_default_height_material"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         local:MvxBind="Click NavigateCommand" />
+    />
+
+</LinearLayout>
